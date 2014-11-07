@@ -1,0 +1,89 @@
+\subsection{Propositions for general categories}
+
+\begin{sequent}
+\begin{align*}
+  A:\Obj, B:\Obj ~|~ \IsZero(A), \IsZero(B) \vdash \IsZero\big( \DirectProduct( [ A, B ] ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  \alpha:\Mor, \beta:\Mor  ~&|~ \IsMonomorphism( \beta ) \\
+  &\vdash \IsMonomorphism\big( \ProjectionInFactorOfPullback( [\alpha, \beta], 1 ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  \alpha:\Mor, \beta:\Mor ~&|~ \IsMonomorphism( \alpha ) \\
+  &\vdash \IsMonomorphism\big( \ProjectionInFactorOfPullback( [\alpha, \beta], 2 ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  \alpha:\Mor, \beta:\Mor ~&|~ \IsEpimorphism( \alpha ) \\
+  &\vdash \IsEpimorphism\big( \InjectionOfCofactorOfPushout( [\alpha, \beta], 2 ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  \alpha:\Mor, \beta:\Mor  ~&|~ \IsEpimorphism( \beta ) \\
+  &\vdash \IsEpimorphism\big( \InjectionOfCofactorOfPushout( [\alpha, \beta], 1 ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  \alpha:\Mor ~&|~ () \\
+  &\vdash \IsMonomorphism\big( \KernelEmb( \alpha ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  \alpha:\Mor ~&|~ () \\
+  &\vdash \IsEpimorphism\big( \CokernelProj( \alpha ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  \alpha:\Mor, \beta:\Mor  ~&|~ () \\
+  &\vdash \IsMonomorphism\big( \Equalizer( \alpha, \beta ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  \alpha:\Mor, \beta:\Mor  ~&|~ () \\
+  &\vdash \IsEpimorphism\big( \Coequalizer( \alpha, \beta ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}\label{sequent:no_proper_context_7}
+\begin{align*}
+  \alpha:\Mor ~&|~ \IsTerminal\big( \Source( \alpha ) \big)\\
+  &\vdash \IsSplitMonomorphism( \alpha )
+\end{align*}
+\end{sequent}
+
+\begin{sequent}\label{sequent:no_proper_context_8}
+\begin{align*}
+  \alpha:\Mor ~&|~ \IsInitial\big( \Range( \alpha ) \big)\\
+  &\vdash \IsSplitEpimorphism( \alpha )
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  L: \List ~|~ \big(\forall x \in L: \mathrm{IsTerminal}(x)\big) \vdash \mathrm{IsTerminal}\big( \mathrm{DirectProduct}( L ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  L: \List ~|~ \big(\forall x \in L: \mathrm{IsInitial}(x)\big) \vdash \mathrm{IsInitial}\big( \mathrm{Coproduct}( L ) \big)
+\end{align*}
+\end{sequent}
