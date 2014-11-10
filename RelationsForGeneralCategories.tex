@@ -1,0 +1,104 @@
+\begin{sequent}
+\begin{align*}
+  &\tau, \alpha:\Mor\\
+  |~ &\IsZero\big( \Precompose( \tau, \alpha ) \big)\\
+  \vdash &\Precompose\big(\UniversalMorphismIntoKernel( \alpha , \tau ), \KernelEmb( \alpha ) \big) = \tau:\Mor
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  &\tau, \alpha:\Mor\\
+  |~  &\IsZero\big(\Precompose(\alpha, \tau)\big)\\
+  \vdash &\Precompose\big(\CokernelProj( \alpha ), \UniversalMorphismFromCokernel( \alpha, \tau )\big) = \tau:\Mor
+\end{align*}
+\end{sequent}
+
+
+Two alternatives for the following relation (I prefer the first one, for it makes
+\texttt{UniversalObjects.gi} consistent).
+\begin{enumerate}
+ \item 
+\begin{sequent}
+\begin{align*}
+  &A, B:\Obj, \tau_A, \tau_B:\Mor\\
+  | ~&() \\
+  \vdash &\Precompose\big(\UniversalMorphismIntoDirectProduct( [A,B], \tau_A, \tau_B ), \\
+  &\ProjectionInFactorOfDirectProduct( [A,B], 1 ) \big) = \tau_A:\Mor
+\end{align*}
+\end{sequent}
+\item
+\begin{sequent}
+\begin{align*}
+  &A, B:\Obj, \tau_A, \tau_B:\Mor\\
+  | ~&\IsIdenticalObj( \Range( \tau_A ), A ), \IsIdenticalObj( \Range( \tau_B ), B ) \\
+  \vdash &\Precompose\big(\UniversalMorphismIntoDirectProduct( \tau_A, \tau_B ), \\
+  &\ProjectionInFactorOfDirectProduct( [A,B], 1 ) \big) = \tau_A:\Mor
+\end{align*}
+\end{sequent}
+
+\end{enumerate}
+
+\begin{sequent}
+\begin{align*}
+&A, B:\Obj, \tau_A, \tau_B:\Mor\\
+  | ~&() \\
+  \vdash &\Precompose\big(\UniversalMorphismIntoDirectProduct( [A,B], \tau_A, \tau_B ), \\
+  &\ProjectionInFactorOfDirectProduct( [A,B], 2 ) \big) = \tau_B:\Mor
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  &A, B:\Obj, \tau_A, \tau_B:\Mor \\
+  |~ &()\\
+  \vdash &\Precompose\big(\InjectionOfCofactorOfCoproduct( [A, B], 1 ),\\
+  &\UniversalMorphismFromCoproduct( \tau_A, \tau_B ) \big) = \tau_A:\Mor
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  &A, B:\Obj, \tau_A, \tau_B:\Mor \\
+  |~ &()\\
+  \vdash &\Precompose\big(\InjectionOfCofactorOfCoproduct( [A, B], 2 ),\\
+  &\UniversalMorphismFromCoproduct( \tau_A, \tau_B ) \big) = \tau_B:\Mor
+\end{align*}
+\end{sequent}
+
+
+\begin{sequent}
+\begin{align*}
+  &\alpha, \beta, \tau_A, \tau_B:\Mor \\
+  |~ &\IsEqualForMorphisms\big( \Precompose( \tau_A, \alpha ), \Precompose( \tau_B, \beta ) \big)\\
+  \vdash &\Precompose\big( \UniversalMorphismIntoPullback( [\alpha, \beta], \tau_A, \tau_B ), \\
+  &\ProjectionInFactorOfPullback( [\alpha, \beta], 1 ) \big) = \tau_A: \Mor
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  &\alpha, \beta, \tau_A, \tau_B:\Mor \\
+  |~ &\IsEqualForMorphisms\big( \Precompose( \tau_A, \alpha ), \Precompose( \tau_B, \beta ) \big)\\
+  \vdash &\Precompose\big( \UniversalMorphismIntoPullback( [\alpha, \beta], \tau_A, \tau_B ), \\
+  &\ProjectionInFactorOfPullback( [\alpha, \beta], 2 ) \big) = \tau_B: \Mor
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  &\alpha, \beta, \tau_A, \tau_B:\Mor \\
+  |~ &\IsEqualForMorphisms\big( \Precompose( \alpha, \tau_A ), \Precompose( \beta, \tau_B) \big)\\
+  \vdash &\Precompose\big( \InjectionOfCofactorOfPushout( [\alpha, \beta], 1 ), \\
+  &\UniversalMorphismFromPushout( [\alpha, \beta], \tau_A, \tau_B )\big) = \tau_A: \Mor
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  &\alpha, \beta, \tau_A, \tau_B:\Mor \\
+  |~ &\IsEqualForMorphisms\big( \Precompose( \alpha, \tau_A ), \Precompose( \beta, \tau_B) \big)\\
+  \vdash &\Precompose\big( \InjectionOfCofactorOfPushout( [\alpha, \beta], 2 ), \\
+  &\UniversalMorphismFromPushout( [\alpha, \beta], \tau_A, \tau_B )\big) = \tau_B: \Mor
+\end{align*}
+\end{sequent}
