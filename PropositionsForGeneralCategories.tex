@@ -86,30 +86,5 @@
 \end{align*}
 \end{sequent}
 
-The complication of the following two sequents comes from the fact that
-$\IsEqualForMorphisms$ formally is a predicate of the product type 
-$\Mor \times \Mor$. But to-do-lists can only be installed for variables/ terms
-of the type $\Mor$ or $\Obj$. So maybe this sequent has to be installed
-within $\IsEqualForMorphisms$.
 
-\begin{enumerate}
- \item 
-\begin{sequent}
-\begin{align*}
-  \alpha,\beta:\Mor ~|~ &\IsTerminal\big( \Range( \alpha ) \big), \IsIdenticalObj\big( \Range( \alpha ), \Range( \beta ) \big),\\	
-  &\IsIdenticalObj\big( \Source( \alpha ), \Source( \beta ) \big)\\
-  \vdash &\IsEqualForMorphisms( \alpha, \beta )
-\end{align*}
-\end{sequent}
-
-\item
-\begin{sequent}
-\begin{align*}
-  \alpha, \beta:\Mor  ~|~ &\IsInitial\big( \Source( \alpha ) \big), \IsIdenticalObj\big( \Source( \alpha ), \Source( \beta ) \big),\\
-  &\IsIdenticalObj\big( \Range( \alpha ), \Range( \beta ) \big)\\
-  \vdash &\IsEqualForMorphisms( \alpha, \beta )
-\end{align*}
-\end{sequent}
-
-\end{enumerate}
 
