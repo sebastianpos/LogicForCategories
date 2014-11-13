@@ -1,16 +1,16 @@
 \begin{sequent}
 \begin{align*}
   &\tau, \alpha:\Mor\\
-  |~ &\IsZero\big( \Precompose( \tau, \alpha ) \big)\\
-  \vdash &\Precompose\big(\UniversalMorphismIntoKernel( \alpha , \tau ), \KernelEmb( \alpha ) \big) = \tau:\Mor
+  |~ &\IsZero\big( \PreCompose( \tau, \alpha ) \big)\\
+  \vdash &\PreCompose\big(\UniversalMorphismIntoKernel( \alpha , \tau ), \KernelEmb( \alpha ) \big) = \tau:\Mor
 \end{align*}
 \end{sequent}
 
 \begin{sequent}
 \begin{align*}
   &\tau, \alpha:\Mor\\
-  |~  &\IsZero\big(\Precompose(\alpha, \tau)\big)\\
-  \vdash &\Precompose\big(\CokernelProj( \alpha ), \UniversalMorphismFromCokernel( \alpha, \tau )\big) = \tau:\Mor
+  |~  &\IsZero\big(\PreCompose(\alpha, \tau)\big)\\
+  \vdash &\PreCompose\big(\CokernelProj( \alpha ), \UniversalMorphismFromCokernel( \alpha, \tau )\big) = \tau:\Mor
 \end{align*}
 \end{sequent}
 
@@ -18,7 +18,7 @@
 \begin{align*}
   &A, B:\Obj, \tau_A, \tau_B:\Mor\\
   | ~&() \\
-  \vdash &\Precompose\big(\UniversalMorphismIntoDirectProduct( [A,B], [\tau_A, \tau_B] ), \\
+  \vdash &\PreCompose\big(\UniversalMorphismIntoDirectProduct( [A,B], [\tau_A, \tau_B] ), \\
   &\ProjectionInFactorOfDirectProduct( [A,B], 1 ) \big) = \tau_A:\Mor
 \end{align*}
 \end{sequent}
@@ -27,7 +27,7 @@
 \begin{align*}
 &A, B:\Obj, \tau_A, \tau_B:\Mor\\
   | ~&() \\
-  \vdash &\Precompose\big(\UniversalMorphismIntoDirectProduct( [A,B], [\tau_A, \tau_B] ), \\
+  \vdash &\PreCompose\big(\UniversalMorphismIntoDirectProduct( [A,B], [\tau_A, \tau_B] ), \\
   &\ProjectionInFactorOfDirectProduct( [A,B], 2 ) \big) = \tau_B:\Mor
 \end{align*}
 \end{sequent}
@@ -36,7 +36,7 @@
 \begin{align*}
   &A, B:\Obj, \tau_A, \tau_B:\Mor \\
   |~ &()\\
-  \vdash &\Precompose\big(\InjectionOfCofactorOfCoproduct( [A, B], 1 ),\\
+  \vdash &\PreCompose\big(\InjectionOfCofactorOfCoproduct( [A, B], 1 ),\\
   &\UniversalMorphismFromCoproduct( [A,B], [\tau_A, \tau_B] ) \big) = \tau_A:\Mor
 \end{align*}
 \end{sequent}
@@ -45,7 +45,7 @@
 \begin{align*}
   &A, B:\Obj, \tau_A, \tau_B:\Mor \\
   |~ &()\\
-  \vdash &\Precompose\big(\InjectionOfCofactorOfCoproduct( [A, B], 2 ),\\
+  \vdash &\PreCompose\big(\InjectionOfCofactorOfCoproduct( [A, B], 2 ),\\
   &\UniversalMorphismFromCoproduct( [A,B], [\tau_A, \tau_B] ) \big) = \tau_B:\Mor
 \end{align*}
 \end{sequent}
@@ -54,8 +54,8 @@
 \begin{sequent}
 \begin{align*}
   &\alpha, \beta, \tau_A, \tau_B:\Mor \\
-  |~ &\IsEqualForMorphisms\big( \Precompose( \tau_A, \alpha ), \Precompose( \tau_B, \beta ) \big)\\
-  \vdash &\Precompose\big( \UniversalMorphismIntoPullback( [\alpha, \beta], [\tau_A, \tau_B] ), \\
+  |~ &\IsEqualForMorphisms\big( \PreCompose( \tau_A, \alpha ), \PreCompose( \tau_B, \beta ) \big)\\
+  \vdash &\PreCompose\big( \UniversalMorphismIntoPullback( [\alpha, \beta], [\tau_A, \tau_B] ), \\
   &\ProjectionInFactorOfPullback( [\alpha, \beta], 1 ) \big) = \tau_A: \Mor
 \end{align*}
 \end{sequent}
@@ -63,8 +63,8 @@
 \begin{sequent}
 \begin{align*}
   &\alpha, \beta, \tau_A, \tau_B:\Mor \\
-  |~ &\IsEqualForMorphisms\big( \Precompose( \tau_A, \alpha ), \Precompose( \tau_B, \beta ) \big)\\
-  \vdash &\Precompose\big( \UniversalMorphismIntoPullback( [\alpha, \beta], [\tau_A, \tau_B] ), \\
+  |~ &\IsEqualForMorphisms\big( \PreCompose( \tau_A, \alpha ), \PreCompose( \tau_B, \beta ) \big)\\
+  \vdash &\PreCompose\big( \UniversalMorphismIntoPullback( [\alpha, \beta], [\tau_A, \tau_B] ), \\
   &\ProjectionInFactorOfPullback( [\alpha, \beta], 2 ) \big) = \tau_B: \Mor
 \end{align*}
 \end{sequent}
@@ -72,8 +72,8 @@
 \begin{sequent}
 \begin{align*}
   &\alpha, \beta, \tau_A, \tau_B:\Mor \\
-  |~ &\IsEqualForMorphisms\big( \Precompose( \alpha, \tau_A ), \Precompose( \beta, \tau_B) \big)\\
-  \vdash &\Precompose\big( \InjectionOfCofactorOfPushout( [\alpha, \beta], 1 ), \\
+  |~ &\IsEqualForMorphisms\big( \PreCompose( \alpha, \tau_A ), \PreCompose( \beta, \tau_B) \big)\\
+  \vdash &\PreCompose\big( \InjectionOfCofactorOfPushout( [\alpha, \beta], 1 ), \\
   &\UniversalMorphismFromPushout( [\alpha, \beta], [\tau_A, \tau_B] )\big) = \tau_A: \Mor
 \end{align*}
 \end{sequent}
@@ -81,8 +81,8 @@
 \begin{sequent}
 \begin{align*}
   &\alpha, \beta, \tau_A, \tau_B:\Mor \\
-  |~ &\IsEqualForMorphisms\big( \Precompose( \alpha, \tau_A ), \Precompose( \beta, \tau_B) \big)\\
-  \vdash &\Precompose\big( \InjectionOfCofactorOfPushout( [\alpha, \beta], 2 ), \\
+  |~ &\IsEqualForMorphisms\big( \PreCompose( \alpha, \tau_A ), \PreCompose( \beta, \tau_B) \big)\\
+  \vdash &\PreCompose\big( \InjectionOfCofactorOfPushout( [\alpha, \beta], 2 ), \\
   &\UniversalMorphismFromPushout( [\alpha, \beta], [\tau_A, \tau_B] )\big) = \tau_B: \Mor
 \end{align*}
 \end{sequent}
