@@ -1,34 +1,43 @@
 \begin{sequent}
 \begin{align*}
-  &t, \alpha:\Mor\\
-  |~ &\IsZero\big( \PreCompose( t, \alpha ) \big)\\
-  \vdash &\PreCompose\big(\UniversalMorphismIntoKernel( \alpha , t ), \KernelEmb( \alpha ) \big) =_{\Mor} t
+  &\tau, \alpha:\Mor\\
+  |~ &\IsZero\big( \PreCompose( \tau, \alpha ) \big)\\
+  \vdash &\PreCompose\big(\UniversalMorphismIntoKernel( \alpha , \tau ), \KernelEmb( \alpha ) \big) = \tau:\Mor
 \end{align*}
 \end{sequent}
 
 \begin{sequent}
 \begin{align*}
-  &t, \alpha:\Mor\\
-  |~  &\IsZero\big(\PreCompose(\alpha, t)\big)\\
-  \vdash &\PreCompose\big(\CokernelProj( \alpha ), \UniversalMorphismFromCokernel( \alpha, t )\big) =_{\Mor} t
+  &\tau, \alpha:\Mor\\
+  |~  &\IsZero\big(\PreCompose(\alpha, \tau)\big)\\
+  \vdash &\PreCompose\big(\CokernelProj( \alpha ), \UniversalMorphismFromCokernel( \alpha, \tau )\big) = \tau:\Mor
 \end{align*}
 \end{sequent}
 
 \begin{sequent}
 \begin{align*}
-  &L:\ListObj, T:\ListMor, i:\Int\\
-  | ~& \forall j \in [ 1, \dots, \Length( L ) ]: \IsEqualForObjects\big(\Source( T[1] ), \Source( T[j] ) \big) \\
-  \vdash &\PreCompose\big(\UniversalMorphismIntoDirectProduct( L, T ), \\
-  &\ProjectionInFactorOfDirectProduct( L, i ) \big) =_{\Mor} T[i]
+  &A, B:\Obj, \tau_A, \tau_B:\Mor\\
+  | ~&() \\
+  \vdash &\PreCompose\big(\UniversalMorphismIntoDirectProduct( [A,B], [\tau_A, \tau_B] ), \\
+  &\ProjectionInFactorOfDirectProduct( [A,B], 1 ) \big) = \tau_A:\Mor
 \end{align*}
 \end{sequent}
 
 \begin{sequent}
 \begin{align*}
-  &L:\ListObj, T:\ListMor, i:\Int\\
+&A, B:\Obj, \tau_A, \tau_B:\Mor\\
+  | ~&() \\
+  \vdash &\PreCompose\big(\UniversalMorphismIntoDirectProduct( [A,B], [\tau_A, \tau_B] ), \\
+  &\ProjectionInFactorOfDirectProduct( [A,B], 2 ) \big) = \tau_B:\Mor
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+  &A, B:\Obj, \tau_A, \tau_B:\Mor \\
   |~ &()\\
-  \vdash &\PreCompose\big(\InjectionOfCofactorOfCoproduct( L, i ),\\
-  &\UniversalMorphismFromCoproduct( L, T ) \big) =_{\Mor} T[i]
+  \vdash &\PreCompose\big(\InjectionOfCofactorOfCoproduct( [A, B], 1 ),\\
+  &\UniversalMorphismFromCoproduct( [A,B], [\tau_A, \tau_B] ) \big) = \tau_A:\Mor
 \end{align*}
 \end{sequent}
 
