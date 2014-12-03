@@ -81,5 +81,17 @@
 \end{align*}
 \end{sequent}
 
+\begin{sequent}
+\begin{align*}
+ \alpha:\Mor, \beta:\Mor ~&|~ \IsMonomorphism( \alpha ), \IsMonomorphism( \beta )  \\
+ &\vdash \IsMonomorphism\big( \PreCompose( \alpha, \beta ) \big)
+\end{align*}
+\end{sequent}
 
+\begin{sequent}
+\begin{align*}
+ \alpha:\Mor, \beta:\Mor ~&|~ \IsEpimorphism( \alpha ), \IsEpimorphism( \beta )  \\
+ &\vdash \IsEpimorphism\big( \PreCompose( \alpha, \beta ) \big)
+\end{align*}
+\end{sequent}
 
