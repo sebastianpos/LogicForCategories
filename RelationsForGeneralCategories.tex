@@ -37,7 +37,7 @@
   &A, B:\Obj, \tau_A, \tau_B:\Mor \\
   |~ &()\\
   \vdash &\PreCompose\big(\InjectionOfCofactorOfCoproduct( [A, B], 2 ),\\
-  &\UniversalMorphismFromCoproduct( [A,B], [\tau_A, \tau_B] ) \big) = \tau_B:\Mor
+  &\UniversalMorphismFromCoproduct( [A,B], [\tau_A, \tau_B] ) \big) =_{\Mor} \tau_B 
 \end{align*}
 \end{sequent}
 
@@ -47,7 +47,7 @@
   &\alpha, \beta, \tau_A, \tau_B:\Mor \\
   |~ &\IsEqualForMorphisms\big( \PreCompose( \tau_A, \alpha ), \PreCompose( \tau_B, \beta ) \big)\\
   \vdash &\PreCompose\big( \UniversalMorphismIntoPullback( [\alpha, \beta], [\tau_A, \tau_B] ), \\
-  &\ProjectionInFactorOfPullback( [\alpha, \beta], 1 ) \big) = \tau_A: \Mor
+  &\ProjectionInFactorOfPullback( [\alpha, \beta], 1 ) \big) =_{\Mor} \tau_A
 \end{align*}
 \end{sequent}
 
@@ -56,7 +56,7 @@
   &\alpha, \beta, \tau_A, \tau_B:\Mor \\
   |~ &\IsEqualForMorphisms\big( \PreCompose( \tau_A, \alpha ), \PreCompose( \tau_B, \beta ) \big)\\
   \vdash &\PreCompose\big( \UniversalMorphismIntoPullback( [\alpha, \beta], [\tau_A, \tau_B] ), \\
-  &\ProjectionInFactorOfPullback( [\alpha, \beta], 2 ) \big) = \tau_B: \Mor
+  &\ProjectionInFactorOfPullback( [\alpha, \beta], 2 ) \big) =_{\Mor} \tau_B
 \end{align*}
 \end{sequent}
 
@@ -65,7 +65,7 @@
   &\alpha, \beta, \tau_A, \tau_B:\Mor \\
   |~ &\IsEqualForMorphisms\big( \PreCompose( \alpha, \tau_A ), \PreCompose( \beta, \tau_B) \big)\\
   \vdash &\PreCompose\big( \InjectionOfCofactorOfPushout( [\alpha, \beta], 1 ), \\
-  &\UniversalMorphismFromPushout( [\alpha, \beta], [\tau_A, \tau_B] )\big) = \tau_A: \Mor
+  &\UniversalMorphismFromPushout( [\alpha, \beta], [\tau_A, \tau_B] )\big) =_{\Mor} \tau_A
 \end{align*}
 \end{sequent}
 
@@ -74,6 +74,6 @@
   &\alpha, \beta, \tau_A, \tau_B:\Mor \\
   |~ &\IsEqualForMorphisms\big( \PreCompose( \alpha, \tau_A ), \PreCompose( \beta, \tau_B) \big)\\
   \vdash &\PreCompose\big( \InjectionOfCofactorOfPushout( [\alpha, \beta], 2 ), \\
-  &\UniversalMorphismFromPushout( [\alpha, \beta], [\tau_A, \tau_B] )\big) = \tau_B: \Mor
+  &\UniversalMorphismFromPushout( [\alpha, \beta], [\tau_A, \tau_B] )\big) =_{\Mor} \tau_B
 \end{align*}
 \end{sequent}
