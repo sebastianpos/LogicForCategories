@@ -1,5 +1,12 @@
 
 \begin{sequent}
+ \begin{align*}
+  A:\Obj ~|~ () \vdash \IsOne\big( \IdentityMorphism( A ) \big)
+ \end{align*}
+\end{sequent}
+
+
+\begin{sequent}
 \begin{align*}
   \alpha:\Mor, \beta:\Mor  ~&|~ \IsMonomorphism( \beta ) \\
   &\vdash \IsMonomorphism\big( \ProjectionInFactorOfFiberProduct( [\alpha, \beta], 1 ) \big)
