@@ -1,5 +1,25 @@
 \begin{sequent}
 \begin{align*}
+   a: \Obj, b: \Obj ~|~ () \vdash \IsZero \big( \ZeroMorphism( a, b ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+   a: \Obj ~|~ () \vdash \IsZero \big( \MorphismIntoZeroObject( a ) \big)
+\end{align*}
+\end{sequent}
+
+\begin{sequent}
+\begin{align*}
+   a: \Obj ~|~ () \vdash \IsZero \big( \MorphismFromZeroObject( a ) \big)
+\end{align*}
+
+\end{sequent}
+
+
+\begin{sequent}
+\begin{align*}
   \alpha: \Mor ~|~ \IsInitial\big( \KernelObject( \alpha ) \big) \vdash \IsMonomorphism( \alpha )
 \end{align*}
 \end{sequent}
